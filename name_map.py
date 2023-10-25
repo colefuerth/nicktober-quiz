@@ -20,6 +20,7 @@ name_map = {
     "Jacob"         : "why forza motorsport is better than forza horizon",
 }
 
+# for non computer people: this just prints the name_map nicely
 padding = max(len(name) for name in name_map)
-
-print('\n'.join(['{:<{width}}   {}'.format(*item, width=padding) for item in sorted(name_map.items())]))
+for name, description in sorted(name_map.items()):
+    print('{:<{width}}   {}'.format(name, description, width=padding))
